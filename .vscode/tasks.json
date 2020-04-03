@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Add new lib",
+            "type": "shell",
+            "command": "python loader.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Add new component",
+            "type": "shell",
+            "command": "python compLoader.py",
+            "problemMatcher": []
+        }
+    ]
+}
