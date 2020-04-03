@@ -1,0 +1,12 @@
+{
+    "components": [
+        {
+            "name": "header",
+            "tag": "header"
+        }
+    ],
+    "config": {
+        "baseUrl": "/components/",
+        "folderMode": true
+    }
+}

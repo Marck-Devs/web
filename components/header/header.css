@@ -1,0 +1,129 @@
+.header{
+    position: fixed;
+    background: #1e1e1e;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size:5rem;
+    color: white;
+    z-index: 2;
+}
+.header .title{
+    font-size: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-100%);
+    animation: easeInTop 1.5s 1 .4s both;
+    display: block;
+    padding: 0 10pt;
+    color: transparent;
+    -webkit-text-stroke: 2pt white;
+}
+.header #h_main{
+    overflow: hidden;
+    position: absolute;
+    transform: translate(0,-50%);
+    left: 30%;
+    top: 50%;
+    height: 5pt;
+    background: white;
+    animation: leftR 1.3s 2.1s 1 both;
+}
+
+.header .subtitle{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,10%);
+    opacity: 0;
+    animation: easeInBot 1.5s 1 .4s both;
+}
+.main-padding{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+}
+
+@keyframes easeInTop{
+    0%{
+        top: -30vh;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes easeOutTop{
+    0%{
+        top: 50%;
+        opacity: 1;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        top: -30vh;
+    }
+}
+
+@keyframes easeInBot{
+    0%{
+        top: 130vh;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes easeOutBot{
+    0%{
+        top: 50%;
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+    }    
+    100%{
+        top: 130vh;
+    }
+    
+}
+@keyframes leftR{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        width: 40%;
+        opacity: 1;
+    }
+}
+
+@keyframes leftROut{
+    0%{
+        width: 40%;
+        
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}
