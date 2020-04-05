@@ -3,6 +3,14 @@
         {
             "name": "header",
             "tag": "header"
+        },
+        {
+            "name": "services",
+            "tag": "services"
+        },
+        {
+            "name": "about",
+            "tag": "about"
         }
     ],
     "config": {

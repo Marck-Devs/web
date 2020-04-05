@@ -12,29 +12,14 @@
     const extensions = [".html", ".js", ".css"];
     function incrutsHTML(tag, html) {
         var label = document.querySelectorAll(tag);
-        var doc = document.createDocumentFragment();
+        var body = document.createDocumentFragment();
         var div = document.createElement("div");
         div.innerHTML = html;
-        doc.append(div);
-        if(doc.querySelector("div head")){
-            console.log("Insertando Header");
-            
-            document.querySelector("head").appendChild(doc.querySelector("div head"));
-            doc.removeChild(doc.querySelector("head"))
+        var data = div.childNodes;
+        for (let i = 0; i < data.length; i++) {
+            const d = data[i];
+            body.append(d);            
         }
-        var scr = doc.querySelectorAll("script");
-        if(scr){
-            
-            for(var i = 0; i < scr.length; i++){
-                var script = document.createElement("script");
-                script.innerText = "// <![CDATA[" + scr[i].text + "//]]";
-                document.body.append(script);
-               
-            }
-        }
-        var body = doc.querySelector("div body");
-        if(!body || body == undefined)
-            body = doc;
         for (let i = 0; i < label.length; i++) {
             const tg = label[i];
             document.body.insertBefore(body,tg);
@@ -66,7 +51,7 @@
         this.__default = {
             configFile: "/components.json",
             baseUrl: "/",
-            folderMode: false
+            folderMode: true
         };
         this.components = [];
         this.config = extend( this.__default, config );
@@ -84,6 +69,7 @@
     }
     Loader.prototype = {
         http : function(){
+            // agregar opcion para IE
             return new XMLHttpRequest();
         },
         init: function(){

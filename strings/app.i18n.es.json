@@ -8,5 +8,9 @@
     "services.app.h4": "Aplicaciones Web",
     "services.app.p1": "Desarrollo de aplicaciones web, tanto públicas como para intranet. Un ejemplo de esto son los sitemas de gestión empresarial",
     "services.mobile.h4": "Aplicaciones Móviles",
-    "services.mobile.p1": "Desarrollo de aplicación para cualquier plataforma móvil."
+    "services.mobile.p1": "Desarrollo de aplicación para cualquier plataforma móvil.",
+    "about.h1": "Sobre Nosotros",
+    "about.p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus fringilla tempor. Ut vestibulum dictum orci vitae accumsan. Maecenas vestibulum a eros eu auctor. Sed sed eleifend augue, non accumsan ligula. Sed laoreet tellus quis imperdiet congue. Sed massa justo, aliquam quis gravida vel, imperdiet vel sapien. Vestibulum pulvinar mi felis, id euismod odio mollis interdum. Nulla et porttitor dolor. Duis finibus efficitur tellus, id sollicitudin eros blandit non. Sed quam tortor, maximus vel mi rhoncus, ullamcorper venenatis sapien",
+    "about.p2": "In gravida neque id odio elementum sagittis. Praesent sollicitudin orci tortor, ut hendrerit ipsum finibus a. Morbi purus libero, iaculis quis nisi ac, luctus faucibus velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vivamus at justo aliquam, suscipit ante interdum, condimentum dolor. Donec cursus elementum sapien, a mattis est. Integer volutpat felis tempus pharetra pellentesque. Donec bibendum enim congue, egestas dui sit amet, placerat mauris. Donec tempus posuere orci, quis auctor turpis ornare nec. Quisque erat nunc, tristique at mauris non, interdum consectetur leo. Maecenas mollis neque eu nibh ultrices gravida at cursus ante.",
+    "about.p3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at dolor ipsum. In accumsan sem malesuada, tincidunt tortor eu, sollicitudin elit. Donec in sapien imperdiet, suscipit tortor in, posuere justo. Duis ut maximus libero. Donec eu nibh eget ante egestas ullamcorper. Nam id lacinia orci. Nunc sit amet congue libero, et pulvinar libero."
 }
