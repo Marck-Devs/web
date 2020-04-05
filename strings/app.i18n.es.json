@@ -1,5 +1,12 @@
 {
     "page.main.title": "Marck Devs",
     "main.title": "Marck",
-    "main.subtitle": "Devs"
+    "main.subtitle": "Devs",
+    "services.h2":"Productos",
+    "services.page.h4": "Páginas Web",
+    "services.page.p1": "Desarrollo personalizado para cada cliente, teniendo la opción de elegir plantillas.",
+    "services.app.h4": "Aplicaciones Web",
+    "services.app.p1": "Desarrollo de aplicaciones web, tanto públicas como para intranet. Un ejemplo de esto son los sitemas de gestión empresarial",
+    "services.mobile.h4": "Aplicaciones Móviles",
+    "services.mobile.p1": "Desarrollo de aplicación para cualquier plataforma móvil."
 }

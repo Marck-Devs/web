@@ -1,0 +1,64 @@
+.services {
+    width: 80%;
+    margin: 10pt auto;
+    margin-top: 20vh;
+    min-height: 70vh;
+    position: relative;
+    z-index: 4;
+    color: #FFF9EF;
+    font-family: "Open Sans";
+    margin-bottom: 30vh;
+}
+.services h2{
+    font-family: Montserrat;
+    font-size: 5rem;
+    color: transparent;
+    -webkit-text-stroke: 3pt #2DAF6C;
+}
+
+.services h4{
+    font-size: 1.5rem;
+    margin-bottom: 5pt;
+}
+
+.services .desc{
+    display: inline-flexbox;
+    position: relative;
+    width: 20%;
+    min-width: 40ch;
+    padding-bottom: 10pt;
+    border-bottom: 3pt solid #2DAF6C;
+    padding-right: 40pt;
+}
+.services .desc .text-container{
+    display: inherit;
+    padding: 6pt 5%;
+    width: 100%;
+}
+
+#services_hr{
+    width: 0;
+    height: 4pt;
+    border: none;
+    background-color: #FFF9EF;
+    animation-duration: 2.3s;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes Services_r{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes Services_r_out{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}

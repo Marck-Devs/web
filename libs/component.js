@@ -83,32 +83,36 @@
             } );
     }
     Loader.prototype = {
+        http : function(){
+            return new XMLHttpRequest();
+        },
         init: function(){
             var self = this;
             this.loadPromise.then(function(){
                 for(var i = 0; i < self.components.length; i++){
-                    var cp = self.components[i];
-                    var file = self.config.baseUrl + cp.name;
-                    if(!self.config.folderMode){
-                        fetch(file + extensions[0]).then(function(data){return data.text()}).then(function(data){
-                            incrutsHTML(cp.tag, data);
-                        });
-                    }else{
-                        file = file + "/" + cp.name;
-                        fetch(file + extensions[0]).then(function(data){return data.text()}).then(function(data){
-                            incrutsHTML(cp.tag, data);
-                        });
-                        var script = document.createElement("script");
-                        script.src =  file + extensions[1];
-                        script.async = true;
-                        var link = document.createElement("link");
-                        link.rel="stylesheet";
-                        link.href = file + extensions[2];
-                        document.head.append(link);
-                        document.body.append(script);
+                    const file = self.config.baseUrl + self.components[i].name  + "/" + self.components[i].name;
+                    const rq = self.http();
+                    const index = i;
+                    rq.onreadystatechange = function(ev) {
+                        if(rq.readyState == 4){
+                            var html = rq.responseText;
+                            incrutsHTML(self.components[index].tag, html);
+                            var script = document.createElement("script");
+                            script.src =  file + extensions[1];
+                            script.async = true;
+                            var link = document.createElement("link");
+                            link.rel="stylesheet";
+                            link.href = file + extensions[2];
+                            document.head.append(link);
+                            document.body.append(script);
+                        }
+                    }
+                    rq.open("GET", file + extensions[0])
+                    rq.send()
+                        
                     }
                 }
-            })
+            )
         }
     }
     w.cpLoader = function(config){
